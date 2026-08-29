@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7EE21ADA-3B02-4CD6-A891-C2257A54B061}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup>
+    <TargetName>d3d8</TargetName>
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>intermediate\$(Configuration)\</IntDir>
+    <IncludePath>$(IncludePath);$(DXSDK_DIR)\Include</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;D3D_DEBUG_INFO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>res\d3d8.def</ModuleDefinitionFile>
+      <AdditionalDependencies>d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;D3D8TO9NOLOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>res\d3d8.def</ModuleDefinitionFile>
+      <AdditionalDependencies>d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\aniso.cpp" />
+    <ClCompile Include="source\d3d8to9.cpp" />
+    <ClCompile Include="source\d3d8to9_base.cpp" />
+    <ClCompile Include="source\d3d8to9_device.cpp" />
+    <ClCompile Include="source\d3d8to9_index_buffer.cpp" />
+    <ClCompile Include="source\d3d8to9_surface.cpp" />
+    <ClCompile Include="source\d3d8to9_swap_chain.cpp" />
+    <ClCompile Include="source\d3d8to9_texture.cpp" />
+    <ClCompile Include="source\d3d8to9_vertex_buffer.cpp" />
+    <ClCompile Include="source\d3d8to9_volume.cpp" />
+    <ClCompile Include="source\d3d8types.cpp" />
+    <ClCompile Include="source\interface_query.cpp" />
+    <ClCompile Include="source\fps_limit.cpp" />
+    <ClCompile Include="source\letterbox.cpp" />
+    <ClCompile Include="source\ini.cpp" />
+    <ClCompile Include="source\msaa.cpp" />
+    <ClCompile Include="source\vsync.cpp" />
+    <ClCompile Include="source\smaa.cpp" />
+    <ClCompile Include="source\smaa_resources.cpp">
+      <!-- The embedded SMAA source text and lookup textures exceed the default object file limits -->
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="source\embedded_d3dx9.cpp">
+      <!-- Embedded d3dx9_43 and d3dcompiler_47 DLLs exceed the default object file limits -->
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="source\MemoryModule\MemoryModule.c">
+      <CompileAs>CompileAsC</CompileAs>
+      <SDLCheck>false</SDLCheck>
+      <WarningLevel>Level1</WarningLevel>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="source\d3d8.hpp" />
+    <ClInclude Include="source\aniso.hpp" />
+    <ClInclude Include="source\d3d8to9.hpp" />
+    <ClInclude Include="source\d3d8types.hpp" />
+    <ClInclude Include="source\d3dx9.hpp" />
+    <ClInclude Include="source\interface_query.hpp" />
+    <ClInclude Include="source\fps_limit.hpp" />
+    <ClInclude Include="source\letterbox.hpp" />
+    <ClInclude Include="source\ini.hpp" />
+    <ClInclude Include="source\msaa.hpp" />
+    <ClInclude Include="source\vsync.hpp" />
+    <ClInclude Include="source\smaa.hpp" />
+    <ClInclude Include="source\embedded_d3dx9.hpp" />
+    <ClInclude Include="source\MemoryModule\MemoryModule.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\d3d8.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\d3d8to9.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

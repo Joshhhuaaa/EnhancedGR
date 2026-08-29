@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="helpers">
+      <UniqueIdentifier>{709e8cf8-ebdb-4573-8524-20b04c6a5883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{2d5bd44f-68df-4a2e-967b-57e194c0eac4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\aniso.cpp" />
+    <ClCompile Include="source\d3d8to9.cpp" />
+    <ClCompile Include="source\d3d8to9_base.cpp" />
+    <ClCompile Include="source\d3d8to9_device.cpp" />
+    <ClCompile Include="source\d3d8to9_index_buffer.cpp" />
+    <ClCompile Include="source\d3d8to9_surface.cpp" />
+    <ClCompile Include="source\d3d8to9_swap_chain.cpp" />
+    <ClCompile Include="source\d3d8to9_texture.cpp" />
+    <ClCompile Include="source\d3d8to9_vertex_buffer.cpp" />
+    <ClCompile Include="source\d3d8to9_volume.cpp" />
+    <ClCompile Include="source\d3d8types.cpp">
+      <Filter>helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\interface_query.cpp">
+      <Filter>helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\fps_limit.cpp" />
+    <ClCompile Include="source\letterbox.cpp" />
+    <ClCompile Include="source\ini.cpp" />
+    <ClCompile Include="source\msaa.cpp" />
+    <ClCompile Include="source\vsync.cpp" />
+    <ClCompile Include="source\smaa.cpp" />
+    <ClCompile Include="source\smaa_resources.cpp" />
+    <ClCompile Include="source\embedded_d3dx9.cpp">
+      <Filter>helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MemoryModule\MemoryModule.c">
+      <Filter>helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="res\resource.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="source\d3d8.hpp">
+      <Filter>helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\aniso.hpp" />
+    <ClInclude Include="source\d3d8to9.hpp" />
+    <ClInclude Include="source\d3d8types.hpp">
+      <Filter>helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\d3dx9.hpp">
+      <Filter>helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\interface_query.hpp">
+      <Filter>helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\fps_limit.hpp" />
+    <ClInclude Include="source\letterbox.hpp" />
+    <ClInclude Include="source\ini.hpp" />
+    <ClInclude Include="source\msaa.hpp" />
+    <ClInclude Include="source\vsync.hpp" />
+    <ClInclude Include="source\smaa.hpp" />
+    <ClInclude Include="source\embedded_d3dx9.hpp">
+      <Filter>helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="source\MemoryModule\MemoryModule.h">
+      <Filter>helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\d3d8.def">
+      <Filter>resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\d3d8to9.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

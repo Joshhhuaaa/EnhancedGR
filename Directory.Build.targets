@@ -1,0 +1,8 @@
+<Project>
+  <!-- Inert unless a d3d8to9 project is in the solution; then the wrapper lands next to
+       the game exe while the asi goes to the plugins folder. -->
+  <PropertyGroup Condition="'$(MSBuildProjectName)'=='d3d8to9'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)Directory.Build.local.targets" Condition="Exists('$(MSBuildThisFileDirectory)Directory.Build.local.targets')" />
+</Project>
