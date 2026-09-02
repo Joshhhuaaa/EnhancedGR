@@ -31,8 +31,8 @@ Field of view is calculated automatically based on the aspect ratio, widening th
 <div align="center">
   <table>
     <tr>
-      <td width="50%"><img style="width:100%" src=""></td>
-      <td width="50%"><img style="width:100%" src=""></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/b2cbf094-bd8a-4683-a339-f7a1eebbef8f"></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/28526a82-ceba-4869-81c8-3fd83f662cce"></td>
     </tr>
     <tr>
       <td align="center">Stock</td>
@@ -56,8 +56,8 @@ Forces anisotropic texture filtering.
 <div align="center">
   <table>
     <tr>
-      <td width="50%"><img style="width:100%" src=""></td>
-      <td width="50%"><img style="width:100%" src=""></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/6fd54166-494c-457f-b7b6-5fc7acfd332f"></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/8eb1dd32-1dc9-4929-8f8b-570b35c18538"></td>
     </tr>
     <tr>
       <td align="center">Stock</td>
@@ -72,8 +72,8 @@ Enables MSAA to smooth jagged edges while preserving a sharp image. MSAA does no
 <div align="center">
   <table>
     <tr>
-      <td width="50%"><img style="width:100%" src=""></td>
-      <td width="50%"><img style="width:100%" src=""></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/d02f3890-e611-4459-be0f-5dd07a557d0b"></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/5349b4a0-a1df-4a46-9673-e7346a43574b"></td>
     </tr>
     <tr>
       <td align="center">Stock</td>
@@ -88,8 +88,8 @@ Enables SMAA to smooth jagged edges with a softer image. SMAA also smooths alpha
 <div align="center">
   <table>
     <tr>
-      <td width="50%"><img style="width:100%" src=""></td>
-      <td width="50%"><img style="width:100%" src=""></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/5e2c04a0-aa0d-404c-bea7-aa35f1c997b1"></td>
+      <td width="50%"><img style="width:100%" src="https://github.com/user-attachments/assets/759f76a4-a707-437c-9ba2-230f4bc1f8ad"></td>
     </tr>
     <tr>
       <td align="center">Stock</td>
@@ -110,9 +110,9 @@ Enables SMAA to smooth jagged edges with a softer image. SMAA also smooths alpha
 <div align="center">
   <table>
     <tr>
-      <td width="33.33%"><img style="width:100%" src=""></td>
-      <td width="33.33%"><img style="width:100%" src=""></td>
-      <td width="33.33%"><img style="width:100%" src=""></td>
+      <td width="33.33%"><img style="width:100%" src="https://github.com/user-attachments/assets/77405715-e008-43c3-8a1a-329d000fc7da"></td>
+      <td width="33.33%"><img style="width:100%" src="https://github.com/user-attachments/assets/c9ea9b74-073a-4fce-a3f5-0b1a6234299b"></td>
+      <td width="33.33%"><img style="width:100%" src="https://github.com/user-attachments/assets/5bffcf30-8832-4a71-a571-d7f8c822264c"></td>
     </tr>
     <tr>
       <td align="center">Stock (stretched)</td>
