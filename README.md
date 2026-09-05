@@ -1,6 +1,6 @@
 # Enhanced GR
 
-A patch for Ghost Recon, fixing bugs and adding gameplay improvements.
+A patch for the original Ghost Recon, fixing bugs and adding gameplay improvements.
 
 If you'd like to donate, all contributions are appreciated.
 <div align="left">
